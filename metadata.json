@@ -1,0 +1,6 @@
+{
+  "name": "AuraVet • Clínica Veterinária & Boutique Animal | NexaWeb Demo",
+  "description": "Demonstração NexaWeb de site para Pet Shop e Clínica Veterinária nos níveis Profissional e Personalizado, com agendamento integrado, medicina preventiva e boutique de cuidados.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
