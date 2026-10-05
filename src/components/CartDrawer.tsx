@@ -1,6 +1,7 @@
 import React from 'react';
 import { BoutiqueProduct } from '../types';
 import { CLINIC_INFO } from '../data/vetData';
+import { ImageWithFallback } from './ImageWithFallback';
 import { X, Trash2, ShoppingBag, ArrowRight, MessageSquare, AlertCircle } from 'lucide-react';
 
 interface CartItem {
@@ -95,9 +96,10 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                       key={product.id}
                       className="p-3.5 bg-white rounded-xl border border-stone-200 flex gap-3 text-xs"
                     >
-                      <img
+                      <ImageWithFallback
                         src={product.imageUrl}
                         alt={product.title}
+                        fallbackText={product.title}
                         className="w-16 h-16 object-cover rounded-lg shrink-0 bg-stone-100"
                       />
                       <div className="flex-1 flex flex-col justify-between">

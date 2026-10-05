@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { IMAGES } from '../assets/images';
+import { ImageWithFallback } from './ImageWithFallback';
 import { Sparkles, Shield, Heart, VolumeX, Eye } from 'lucide-react';
 
 export const CatFriendlySpotlight: React.FC = () => {
@@ -13,10 +15,10 @@ export const CatFriendlySpotlight: React.FC = () => {
           {/* Visual Column with High-Fidelity Asset */}
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-xl border border-stone-200/90 aspect-[4/3] bg-stone-100">
-              <img
-                src="/src/assets/images/cat_friendly_suite_1791213423130.jpg"
+              <ImageWithFallback
+                src={IMAGES.catSuite}
                 alt="Consultório acolhedor exclusivo para felinos com veterinário atencioso"
-                referrerPolicy="no-referrer"
+                fallbackText="Ala Felina Cat-Friendly"
                 className="w-full h-full object-cover"
               />
               

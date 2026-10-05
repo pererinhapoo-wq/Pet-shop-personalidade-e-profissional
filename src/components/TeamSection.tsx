@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { VET_TEAM } from '../data/vetData';
 import { VetDoctor } from '../types';
+import { ImageWithFallback } from './ImageWithFallback';
 import { Award, GraduationCap, X, ChevronRight } from 'lucide-react';
 
 export const TeamSection: React.FC = () => {
@@ -34,10 +35,10 @@ export const TeamSection: React.FC = () => {
               <div>
                 {/* Doctor Avatar / Photo */}
                 <div className="relative aspect-[4/5] bg-stone-100 overflow-hidden">
-                  <img
+                  <ImageWithFallback
                     src={doctor.avatarUrl}
                     alt={doctor.name}
-                    referrerPolicy="no-referrer"
+                    fallbackText={doctor.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter grayscale-[15%] group-hover:grayscale-0"
                   />
                   
@@ -91,9 +92,10 @@ export const TeamSection: React.FC = () => {
 
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-16 h-16 rounded-full overflow-hidden shrink-0 border border-stone-300">
-                  <img
+                  <ImageWithFallback
                     src={selectedDoctor.avatarUrl}
                     alt={selectedDoctor.name}
+                    fallbackText={selectedDoctor.name}
                     className="w-full h-full object-cover"
                   />
                 </div>

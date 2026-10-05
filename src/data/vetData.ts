@@ -1,4 +1,5 @@
 import { ServiceItem, VetDoctor, BoutiqueProduct, PreventiveProtocol } from '../types';
+import { IMAGES } from '../assets/images';
 
 export const CLINIC_INFO = {
   name: 'AuraVet',
@@ -118,7 +119,7 @@ export const VET_TEAM: VetDoctor[] = [
     crmv: 'CRMV-SP 34.892',
     specialties: ['Medicina Felina', 'Medicina Interna Integrativa', 'Endocrinologia'],
     bio: 'Mais de 14 anos dedicados ao cuidado hospitalar e medicina preventiva. Especialista com certificação internacional Cat-Friendly Practice, pioneira no atendimento acolhedor sem coerção.',
-    avatarUrl: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80',
+    avatarUrl: IMAGES.doctorHelena,
     education: 'Graduação pela USP • Pós-graduação em Medicina Felina pela Anclivepa',
   },
   {
@@ -128,7 +129,7 @@ export const VET_TEAM: VetDoctor[] = [
     crmv: 'CRMV-SP 41.205',
     specialties: ['Cirurgia de Tecidos Moles', 'Anestesia Inalatória Monitorada', 'Controle Álgico'],
     bio: 'Especialista em segurança do paciente cirúrgico e técnicas minimamente invasivas. Atua com protocolos avançados de analgesia multimodal preventiva para recuperação indolor.',
-    avatarUrl: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80',
+    avatarUrl: IMAGES.doctorMarcos,
     education: 'Residência Médica Veterinária pela Unesp Botucatu • Membro do Colégio Brasileiro de Cirurgia Veterinária',
   },
   {
@@ -138,7 +139,7 @@ export const VET_TEAM: VetDoctor[] = [
     crmv: 'CRMV-SP 46.118',
     specialties: ['Dermatologia', 'Alergologia', 'Ozonioterapia Cutânea'],
     bio: 'Dedicada ao diagnóstico minucioso de dermatites atópicas, alergias alimentares e desordens de barreira cutânea. Integra a medicina laboratorial com tratamentos tópicos no SPA.',
-    avatarUrl: 'https://images.unsplash.com/photo-1594824813589-a9a7a972c237?auto=format&fit=crop&w=600&q=80',
+    avatarUrl: IMAGES.doctorBeatriz,
     education: 'Mestrado em Ciências Veterinárias • Membro da Sociedade Brasileira de Dermatologia Veterinária',
   },
   {
@@ -148,7 +149,7 @@ export const VET_TEAM: VetDoctor[] = [
     crmv: 'CRMV-SP 48.970',
     specialties: ['Ecocardiografia Doppler', 'Ultrassonografia Abdominal', 'Cardiologia Clínica'],
     bio: 'Responsável pelo parque de diagnóstico por imagem. Especializado na avaliação precoce de cardiopatias congênitas e degenerativas em pacientes adultos e senis.',
-    avatarUrl: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80',
+    avatarUrl: IMAGES.doctorLucas,
     education: 'Pós-graduação em Cardiologia Veterinária • Certificação em Ultrassonografia Avançada',
   },
 ];
@@ -164,7 +165,7 @@ export const BOUTIQUE_PRODUCTS: BoutiqueProduct[] = [
     priceFormatted: 'R$ 184,00',
     prescriptionRequired: false,
     tags: ['Grain-Free', 'Ômega-3', 'Alta Digestibilidade'],
-    imageUrl: '/src/assets/images/pet_boutique_nutrition_1791213443351.jpg',
+    imageUrl: IMAGES.boutiqueNutrition,
     compositionHighlight: '80% Proteína de origem animal • Sem subprodutos de milho e soja',
   },
   {
@@ -177,7 +178,7 @@ export const BOUTIQUE_PRODUCTS: BoutiqueProduct[] = [
     priceFormatted: 'R$ 89,00',
     prescriptionRequired: false,
     tags: ['pH Fisiológico', 'Aveia Coloidal', 'Hipoalergênico'],
-    imageUrl: '/src/assets/images/pet_spa_grooming_1791213433780.jpg',
+    imageUrl: IMAGES.spaGrooming,
     compositionHighlight: 'Extrato botânico concentrado de calêndula e fitoesfingosina',
   },
   {
@@ -190,7 +191,7 @@ export const BOUTIQUE_PRODUCTS: BoutiqueProduct[] = [
     priceFormatted: 'R$ 112,00',
     prescriptionRequired: true,
     tags: ['Uso Veterinário', '5 Cepas Vivas', 'Sabor Agradável'],
-    imageUrl: '/src/assets/images/pet_boutique_nutrition_1791213443351.jpg',
+    imageUrl: IMAGES.boutiqueNutrition,
     compositionHighlight: '5 bilhões de UFC por dose recomendada • Estável à temperatura ambiente',
   },
   {
@@ -203,7 +204,7 @@ export const BOUTIQUE_PRODUCTS: BoutiqueProduct[] = [
     priceFormatted: 'R$ 145,00',
     prescriptionRequired: false,
     tags: ['Madeira Sustentável', 'Antiestresse', 'Etologia Canina'],
-    imageUrl: '/src/assets/images/pet_boutique_nutrition_1791213443351.jpg',
+    imageUrl: IMAGES.boutiqueNutrition,
     compositionHighlight: 'Sem peças destacáveis perigosas • Verniz orgânico atóxico à base d’água',
   },
   {
@@ -216,7 +217,7 @@ export const BOUTIQUE_PRODUCTS: BoutiqueProduct[] = [
     priceFormatted: 'R$ 138,00',
     prescriptionRequired: false,
     tags: ['Ultra Purificado', 'Anti-inflamatório Natural', 'Saúde Renal & Articular'],
-    imageUrl: '/src/assets/images/pet_boutique_nutrition_1791213443351.jpg',
+    imageUrl: IMAGES.boutiqueNutrition,
     compositionHighlight: 'Livre de metais pesados com certificação internacional de pureza',
   },
   {
@@ -229,7 +230,7 @@ export const BOUTIQUE_PRODUCTS: BoutiqueProduct[] = [
     priceFormatted: 'R$ 126,00',
     prescriptionRequired: false,
     tags: ['Uso Felino', 'Feromônio Sintético', 'Anti-ansiedade'],
-    imageUrl: '/src/assets/images/cat_friendly_suite_1791213423130.jpg',
+    imageUrl: IMAGES.catSuite,
     compositionHighlight: 'Solução etanólica suave com liberação gradual por até 5 horas',
   },
 ];

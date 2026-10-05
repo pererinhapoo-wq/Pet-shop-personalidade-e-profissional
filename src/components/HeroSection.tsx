@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { PlanTier, PetSpecies } from '../types';
 import { CLINIC_INFO } from '../data/vetData';
+import { IMAGES } from '../assets/images';
+import { ImageWithFallback } from './ImageWithFallback';
 import { Calendar, ShieldAlert, ArrowRight, Clock, MapPin, HeartHandshake, Sparkles, Stethoscope } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -98,10 +100,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Right Focal Carrier */}
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-stone-200/90 aspect-[4/3] lg:aspect-[5/4] bg-stone-100">
-                <img
-                  src="/src/assets/images/vet_hero_care_1791213411609.jpg"
+                <ImageWithFallback
+                  src={IMAGES.heroCare}
                   alt="Veterinária em atendimento cuidadoso examinando cão com carinho"
-                  referrerPolicy="no-referrer"
+                  fallbackText="AuraVet • Medicina Integrada"
                   className="w-full h-full object-cover"
                 />
                 
@@ -145,10 +147,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               
               {/* Primary Visual Anchor (7 cols) */}
               <div className="lg:col-span-7 rounded-2xl overflow-hidden shadow-lg border border-stone-200/90 relative min-h-[360px] lg:min-h-[460px] bg-stone-900 group">
-                <img
-                  src="/src/assets/images/vet_hero_care_1791213411609.jpg"
+                <ImageWithFallback
+                  src={IMAGES.heroCare}
                   alt="Doutora veterinária em momento de escuta e exame com paciente canino"
-                  referrerPolicy="no-referrer"
+                  fallbackText="AuraVet • Consulta Humanizada"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"
                 />
                 

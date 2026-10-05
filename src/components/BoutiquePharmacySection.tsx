@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BOUTIQUE_PRODUCTS, CLINIC_INFO } from '../data/vetData';
 import { BoutiqueProduct, PlanTier } from '../types';
+import { ImageWithFallback } from './ImageWithFallback';
 import { ShoppingBag, Sparkles, AlertCircle, Check, ArrowRight, X } from 'lucide-react';
 
 interface BoutiquePharmacySectionProps {
@@ -99,10 +100,10 @@ export const BoutiquePharmacySection: React.FC<BoutiquePharmacySectionProps> = (
                 <div>
                   {/* Product Image Slot with Fallback */}
                   <div className="relative aspect-[4/3] bg-stone-100 overflow-hidden">
-                    <img
+                    <ImageWithFallback
                       src={product.imageUrl}
                       alt={product.title}
-                      referrerPolicy="no-referrer"
+                      fallbackText={product.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     
@@ -224,9 +225,10 @@ export const BoutiquePharmacySection: React.FC<BoutiquePharmacySectionProps> = (
               </h3>
 
               <div className="aspect-video w-full rounded-xl overflow-hidden mb-4 bg-stone-100">
-                <img
+                <ImageWithFallback
                   src={selectedProduct.imageUrl}
                   alt={selectedProduct.title}
+                  fallbackText={selectedProduct.title}
                   className="w-full h-full object-cover"
                 />
               </div>
